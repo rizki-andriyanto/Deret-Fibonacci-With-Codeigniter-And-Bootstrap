@@ -35,14 +35,14 @@ class Fibonacci extends CI_Controller {
         }  
 
 
-        $jumlah = $page * 10; // Acuan 1000 Halaman
+        $jumlah = $page * 10; // Per page di x 10 untuk tampil di page = 10 data
              //simpan string angka awal
         $hasil = array();
-        $hasil[0] = 0;
-        $hasil[1] = 1;
-        for ($i=2; $i<$jumlah; $i++)
+        $hasil[0] = 0;//data ke index 0
+        $hasil[1] = 1;// data ke index 1
+        for ($i=2; $i<$jumlah; $i++) //mulai dari index ke 2
         {
-          $hasil[$i] = $hasil[$i-1] + $hasil[$i-2];
+          $hasil[$i] = $hasil[$i-1] + $hasil[$i-2]; //jika hasil = 1,maka di dapat dari array (2), (2-1) + (2-2)
         } 
 
          $data['hasil'] = $hasil;       
